@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkIQ.tech - Gestão de Backlinks com IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#fff;color:#1e293b;line-height:1.6}.container{max-width:1280px;margin:0 auto;padding:0 1.5rem}nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #f1f5f9;padding:1rem 0}.nav-container{display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.75rem;font-weight:800;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}.nav-links{display:flex;gap:2rem;align-items:center;list-style:none}.nav-links a{color:#475569;text-decoration:none;font-weight:500;transition:.15s}.nav-links a:hover{color:#6366f1}.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.3s}.btn-primary{background:linear-gradient(135deg,#6366f1 0%,#4f46e5 100%);color:#fff;box-shadow:0 4px 12px rgba(99,102,241,.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(99,102,241,.4)}.btn-secondary{background:#fff;color:#6366f1;border:2px solid #6366f1}.btn-secondary:hover{background:#6366f1;color:#fff}.btn-large{padding:1rem 2.5rem;font-size:1.1rem}.hero{padding:6rem 0;background:linear-gradient(135deg,#f8fafc 0%,#e0e7ff 100%);text-align:center}.hero h1{font-size:3rem;font-weight:900;line-height:1.1;margin-bottom:1.5rem;color:#0f172a}.gradient-text{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero p{font-size:1.3rem;color:#64748b;margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto}.hero-cta{display:flex;gap:1rem;justify-content:center;margin-bottom:2rem}.features{padding:6rem 0;background:#fff}.section-header{text-align:center;max-width:800px;margin:0 auto 4rem}.section-header h2{font-size:2.5rem;font-weight:800;color:#0f172a;margin-bottom:1.5rem}.section-header p{font-size:1.2rem;color:#64748b}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.feature-card{background:#fff;padding:3rem;border-radius:1rem;border:2px solid #f1f5f9;transition:.3s}.feature-card:hover{border-color:#6366f1;box-shadow:0 20px 25px -5px rgba(0,0,0,.1);transform:translateY(-5px)}.feature-icon{font-size:2.5rem;margin-bottom:1rem}.feature-card h3{font-size:1.4rem;font-weight:700;color:#0f172a;margin-bottom:.5rem}.feature-card p{color:#64748b}.plans{padding:6rem 0;background:linear-gradient(135deg,#f8fafc 0%,#e0e7ff 100%)}.plans-intro{text-align:center;max-width:900px;margin:0 auto 4rem}.plans-intro .highlight{font-size:1.4rem;color:#6366f1;font-weight:700;margin:1.5rem 0}.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:4rem}.plan-card{background:#fff;border-radius:1.5rem;padding:3rem;border:2px solid #f1f5f9;transition:.3s;position:relative}.plan-card:hover{transform:translateY(-5px);box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}.plan-card.professional{border-color:#8b5cf6;transform:scale(1.03)}.plan-card.professional::before{content:'MAIS POPULAR';position:absolute;top:20px;right:-35px;background:#f59e0b;color:#fff;padding:5px 40px;font-size:.75rem;font-weight:700;transform:rotate(45deg)}.plan-header{text-align:center;margin-bottom:2rem}.plan-name{font-size:1.5rem;font-weight:700;color:#0f172a;margin-bottom:.5rem}.plan-price{font-size:3rem;font-weight:900;color:#6366f1;margin-bottom:.25rem}.plan-price .currency{font-size:1.5rem}.plan-period{color:#64748b;font-size:.9rem}.plan-features{list-style:none;margin:2rem 0}.plan-features li{padding:.5rem 0;color:#475569;display:flex;align-items:center;gap:.5rem}.plan-features li::before{content:'✓';color:#10b981;font-weight:700;font-size:1.2rem}.plan-features li.disabled{color:#cbd5e1}.plan-features li.disabled::before{content:'✗';color:#cbd5e1}.cta-section{padding:6rem 0;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);color:#fff;text-align:center}.cta-section h2{font-size:2.5rem;font-weight:900;margin-bottom:1.5rem}.cta-section p{font-size:1.3rem;margin-bottom:3rem}footer{background:#0f172a;color:#94a3b8;padding:4rem 0;text-align:center}footer p{margin-top:.5rem}footer a{color:#94a3b8;text-decoration:none}@media (max-width:768px){.hero h1{font-size:2rem}.nav-links{display:none}.plans-grid{grid-template-columns:1fr}.plan-card.professional{transform:scale(1)}}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">LinkIQ.tech</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#" class="btn btn-primary" onclick="handleSignup()">Começar Grátis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Gestão Inteligente de<br><span class="gradient-text">Backlinks com IA</span></h1>
+            <p>Monitore, analise e potencialize sua estratégia de link building. Todos os recursos a partir de R$ 97/mês.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary btn-large" onclick="handleSignup()">🚀 Começar Grátis</button>
+                <a href="#planos" class="btn btn-secondary btn-large">Ver Planos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recursos Poderosos</h2>
+                <p>Tudo que você precisa para dominar backlinks</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Monitoramento Real-Time</h3>
+                    <p>Detecte backlinks instantaneamente. Histórico ilimitado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>IA Ilimitada</h3>
+                    <p>Gere conteúdo otimizado sem limites.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Análise de Concorrentes</h3>
+                    <p>Descubra estratégias da competição.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3>Outreach Automatizado</h3>
+                    <p>Emails personalizados automaticamente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Integrações</h3>
+                    <p>Slack, Discord, Zapier, API completa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Relatórios PDF</h3>
+                    <p>Profissionais e personalizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="plans">
+        <div class="container">
+            <div class="plans-intro">
+                <h2>🎯 Quantos Projetos Você Gerencia?</h2>
+                <p class="highlight">TODOS os planos pagos têm TODOS os recursos!</p>
+                <p>A diferença? Capacidade de projetos! 🚀</p>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">🆓 FREE</div>
+                        <div class="plan-price"><span class="currency">R$</span> 0</div>
+                        <div class="plan-period">Para sempre</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>2 contas por IP</li>
+                        <li>1 projeto, 3 URLs</li>
+                        <li>500 verificações/mês</li>
+                        <li class="disabled">IA de conteúdo</li>
+                        <li class="disabled">Outreach</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="handleSignup()" style="width:100%">Criar Grátis</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">🚀 STARTER</div>
+                        <div class="plan-price"><span class="currency">R$</span> 97</div>
+                        <div class="plan-period">/mês</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><strong>10 projetos, 150 URLs</strong></li>
+                        <li>✅ TODOS recursos</li>
+                        <li>✅ IA ilimitada</li>
+                        <li>✅ Outreach ilimitado</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="alert('Em breve!')" style="width:100%">Escolher</button>
+                </div>
+                <div class="plan-card professional">
+                    <div class="plan-header">
+                        <div class="plan-name">💎 PROFESSIONAL</div>
+                        <div class="plan-price"><span class="currency">R$</span> 297</div>
+                        <div class="plan-period">/mês</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><strong>30 projetos, 600 URLs</strong></li>
+                        <li>✅ Todos do Starter</li>
+                        <li>✅ Prioridade</li>
+                        <li>✅ Relatórios custom</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="alert('Em breve!')" style="width:100%">Escolher</button>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">🏆 ENTERPRISE</div>
+                        <div class="plan-price"><span class="currency">R$</span> 997</div>
+                        <div class="plan-period">/mês</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><strong>∞ ILIMITADO</strong></li>
+                        <li>✅ White-label</li>
+                        <li>✅ API dedicada</li>
+                        <li>📞 Suporte 24/7</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="alert('Em breve!')" style="width:100%">Contato</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Transformar Seu SEO?</h2>
+            <p>Comece gratuitamente agora.</p>
+            <button class="btn btn-large" style="background:#fff;color:#6366f1" onclick="handleSignup()">🚀 Criar Conta Grátis</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LinkIQ.tech - Todos os direitos reservados</p>
+            <p><a href="mailto:suporte@linkiq.tech">suporte@linkiq.tech</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const API_URL = 'https://SEU-BACKEND-RAILWAY.up.railway.app';
+        
+        async function handleSignup(){
+            const email=prompt('Email:');
+            if(!email||!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){alert('❌ Email inválido!');return}
+            const name=prompt('Nome:')||'Usuário';
+            try{
+                const r=await fetch(`${API_URL}/api/auth/signup`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,name})});
+                const d=await r.json();
+                if(r.ok){alert(`🎉 Conta criada!\n\n✅ ${email}\n📊 Plano: FREE`);localStorage.setItem('linkiq_token',d.token)}
+                else alert(`❌ ${d.message||'Erro'}`)
+            }catch(e){alert('❌ Erro de conexão')}
+        }
+    </script>
+</body>
+</html>
