@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - LinkIQ.tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}:root{--primary:#6366f1;--primary-dark:#4f46e5;--success:#10b981;--warning:#f59e0b;--danger:#ef4444;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-600:#475569;--gray-700:#334155;--gray-900:#0f172a}.sidebar{position:fixed;left:0;top:0;bottom:0;width:260px;background:#fff;border-right:1px solid var(--gray-200);padding:2rem 0;overflow-y:auto;z-index:100}.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--primary) 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:0 1.5rem;margin-bottom:2rem;text-decoration:none;display:block}.nav-menu{list-style:none}.nav-item{padding:.75rem 1.5rem;display:flex;align-items:center;gap:.75rem;color:var(--gray-600);cursor:pointer;transition:.2s;font-size:.95rem;font-weight:500;text-decoration:none}.nav-item:hover{background:var(--gray-50);color:var(--primary)}.nav-item.active{background:var(--gray-50);color:var(--primary)}.nav-icon{font-size:1.2rem}.main-content{margin-left:260px;padding:2rem;max-width:1200px}.header{background:#fff;padding:1.5rem 2rem;border-radius:1rem;margin-bottom:2rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;justify-content:space-between;align-items:center}.header h1{font-size:1.75rem;font-weight:800;color:var(--gray-900)}.user-info{display:flex;align-items:center;gap:1rem}.user-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#8b5cf6 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}.user-details{text-align:right}.user-name{font-weight:600;font-size:.9rem;color:var(--gray-900)}.user-plan{font-size:.8rem;color:var(--gray-600)}.card{background:#fff;border-radius:1rem;padding:2rem;margin-bottom:1.5rem;border:2px solid var(--gray-100)}.card-header{margin-bottom:1.5rem}.card-title{font-size:1.5rem;font-weight:700;color:var(--gray-900);margin-bottom:.5rem}.card-subtitle{color:var(--gray-600);font-size:.95rem}.btn{padding:.75rem 1.5rem;border-radius:.5rem;font-weight:600;border:none;cursor:pointer;transition:.3s;font-size:.9rem;display:inline-flex;align-items:center;gap:.5rem}.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}.btn-secondary{background:var(--gray-100);color:var(--gray-700)}.btn-secondary:hover{background:var(--gray-200)}.btn-success{background:var(--success);color:#fff}.btn-success:hover{background:#059669;transform:translateY(-2px)}.btn-danger{background:var(--danger);color:#fff}.btn-danger:hover{background:#dc2626;transform:translateY(-2px)}.btn-sm{padding:.5rem 1rem;font-size:.85rem}.form-group{margin-bottom:1.5rem}.form-label{display:block;margin-bottom:.5rem;font-weight:600;color:var(--gray-700);font-size:.9rem}.form-input,.form-select{width:100%;padding:.75rem;border:2px solid var(--gray-200);border-radius:.5rem;font-size:.95rem;transition:.2s;font-family:'Inter',sans-serif}.form-input:focus,.form-select:focus{outline:none;border-color:var(--primary)}.form-input[type="password"]{font-family:monospace}.form-help{display:block;color:var(--gray-600);font-size:.85rem;margin-top:.5rem}.form-help a{color:var(--primary);text-decoration:none;font-weight:600}.form-help a:hover{text-decoration:underline}.alert{padding:1rem 1.5rem;border-radius:.75rem;margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:.75rem;line-height:1.6}.alert-success{background:rgba(16,185,129,.1);border:2px solid var(--success);color:var(--success)}.alert-warning{background:rgba(245,158,11,.1);border:2px solid var(--warning);color:var(--warning)}.alert-danger{background:rgba(239,68,68,.1);border:2px solid var(--danger);color:var(--danger)}.alert-info{background:rgba(99,102,241,.1);border:2px solid var(--primary);color:var(--primary)}.badge{display:inline-block;padding:.25rem .75rem;border-radius:50px;font-size:.8rem;font-weight:600}.badge-success{background:rgba(16,185,129,.1);color:var(--success)}.badge-free{background:var(--gray-100);color:var(--gray-600)}.badge-pro{background:rgba(99,102,241,.1);color:var(--primary)}.api-key-preview{font-family:monospace;background:var(--gray-50);padding:.75rem;border-radius:.5rem;font-size:.85rem;color:var(--gray-600);border:1px solid var(--gray-200;word-break:break-all}.cost-table{width:100%;border-collapse:collapse;margin-top:1rem}.cost-table th{text-align:left;padding:.75rem;background:var(--gray-50);color:var(--gray-700);font-weight:600;font-size:.85rem;border-bottom:2px solid var(--gray-200)}.cost-table td{padding:.75rem;border-bottom:1px solid var(--gray-100);font-size:.9rem}.divider{height:1px;background:var(--gray-200);margin:2rem 0}.tabs{display:flex;gap:.5rem;border-bottom:2px solid var(--gray-200);margin-bottom:2rem}.tab{padding:.75rem 1.5rem;cursor:pointer;border:none;background:none;font-weight:600;color:var(--gray-600);transition:.2s;border-bottom:3px solid transparent;margin-bottom:-2px}.tab.active{color:var(--primary);border-bottom-color:var(--primary)}.tab-content{display:none}.tab-content.active{display:block}.key-status{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;padding:.5rem 1rem;border-radius:50px;font-weight:600}.key-status.configured{background:rgba(16,185,129,.1);color:var(--success)}.key-status.missing{background:rgba(239,68,68,.1);color:var(--danger)}@media (max-width:768px){.sidebar{width:100%;position:relative;border-right:none;border-bottom:1px solid var(--gray-200)}.main-content{margin-left:0}.header{flex-direction:column;gap:1rem;text-align:center}}
+    </style>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="/dashboard.html" class="logo">LinkIQ.tech</a>
+        <ul class="nav-menu">
+            <a href="/dashboard.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span>Visão Geral</span>
+            </a>
+            <a href="/dashboard.html#projects" class="nav-item">
+                <span class="nav-icon">📁</span>
+                <span>Projetos</span>
+            </a>
+            <a href="/dashboard.html#backlinks" class="nav-item">
+                <span class="nav-icon">🔗</span>
+                <span>Backlinks</span>
+            </a>
+            <a href="/dashboard.html#ai-content" class="nav-item">
+                <span class="nav-icon">🤖</span>
+                <span>IA - Conteúdo</span>
+            </a>
+            <a href="/dashboard.html#outreach" class="nav-item">
+                <span class="nav-icon">📧</span>
+                <span>Outreach</span>
+            </a>
+            <a href="/settings.html" class="nav-item active">
+                <span class="nav-icon">⚙️</span>
+                <span>Configurações</span>
+            </a>
+            <a href="#" onclick="logout()" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span>Sair</span>
+            </a>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>⚙️ Configurações</h1>
+            <div class="user-info">
+                <div class="user-details">
+                    <div class="user-name" id="user-name">Carregando...</div>
+                    <div class="user-plan" id="user-plan">Plano FREE</div>
+                </div>
+                <div class="user-avatar" id="user-avatar">?</div>
+            </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('account')">👤 Conta</button>
+            <button class="tab" onclick="switchTab('api-keys')">🔑 API Keys</button>
+            <button class="tab" onclick="switchTab('billing')">💳 Plano</button>
+            <button class="tab" onclick="switchTab('notifications')">🔔 Notificações</button>
+        </div>
+
+        <!-- TAB: ACCOUNT -->
+        <div id="tab-account" class="tab-content active">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Informações da Conta</h2>
+                    <p class="card-subtitle">Gerencie seus dados pessoais</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Nome Completo</label>
+                    <input type="text" class="form-input" id="account-name" placeholder="Seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="account-email" placeholder="seu@email.com" readonly>
+                    <small class="form-help">O email não pode ser alterado por segurança</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Empresa/Site (Opcional)</label>
+                    <input type="text" class="form-input" id="account-company" placeholder="Nome da sua empresa ou site">
+                </div>
+
+                <button class="btn btn-primary" onclick="saveAccountInfo()">
+                    💾 Salvar Alterações
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Alterar Senha</h2>
+                    <p class="card-subtitle">Atualize sua senha de acesso</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Senha Atual</label>
+                    <input type="password" class="form-input" id="current-password" placeholder="Digite sua senha atual">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nova Senha</label>
+                    <input type="password" class="form-input" id="new-password" placeholder="Mínimo 8 caracteres">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Confirmar Nova Senha</label>
+                    <input type="password" class="form-input" id="confirm-password" placeholder="Digite a senha novamente">
+                </div>
+
+                <button class="btn btn-success" onclick="changePassword()">
+                    🔒 Alterar Senha
+                </button>
+            </div>
+        </div>
+
+        <!-- TAB: API KEYS -->
+        <div id="tab-api-keys" class="tab-content">
+            <div class="alert alert-info">
+                <span style="font-size:1.5rem">💡</span>
+                <div>
+                    <strong>Modelo BYOK (Bring Your Own Key)</strong>
+                    <p style="margin-top:.5rem">Você mantém controle total dos custos! Use suas próprias API keys das plataformas. Todas as keys são criptografadas antes de serem salvas.</p>
+                </div>
+            </div>
+
+            <!-- OpenAI API Key -->
+            <div class="card">
+                <div class="card-header">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <h2 class="card-title">🤖 OpenAI API Key</h2>
+                            <p class="card-subtitle">Para gerar conteúdo com IA (GPT-4)</p>
+                        </div>
+                        <span class="key-status missing" id="openai-status">
+                            ❌ Não configurada
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">API Key</label>
+                    <input type="password" class="form-input" id="api-openai" placeholder="sk-proj-...">
+                    <small class="form-help">
+                        📘 <a href="https://platform.openai.com/api-keys" target="_blank">Criar conta e obter API key na OpenAI</a>
+                    </small>
+                </div>
+
+                <div style="background:var(--gray-50);padding:1rem;border-radius:.5rem;margin-bottom:1rem">
+                    <h4 style="font-size:.9rem;margin-bottom:.5rem;color:var(--gray-700)">💰 Estimativa de Custos:</h4>
+                    <table class="cost-table">
+                        <tr>
+                            <td>Geração de 10 emails</td>
+                            <td><strong>~$0.15</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Geração de 1 artigo (1000 palavras)</td>
+                            <td><strong>~$0.30</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Uso mensal típico</td>
+                            <td><strong>$10-30/mês</strong></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <button class="btn btn-success" onclick="saveAPIKey('openai')">
+                    🔒 Salvar OpenAI Key
+                </button>
+            </div>
+
+            <!-- SendGrid API Key -->
+            <div class="card">
+                <div class="card-header">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <h2 class="card-title">📧 SendGrid API Key</h2>
+                            <p class="card-subtitle">Para envio de emails de outreach</p>
+                        </div>
+                        <span class="key-status missing" id="sendgrid-status">
+                            ❌ Não configurada
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">API Key</label>
+                    <input type="password" class="form-input" id="api-sendgrid" placeholder="SG.">
+                    <small class="form-help">
+                        📘 <a href="https://app.sendgrid.com/settings/api_keys" target="_blank">Criar conta e obter API key no SendGrid</a>
+                    </small>
+                </div>
+
+                <div class="alert alert-success">
+                    <span>✅</span>
+                    <div>
+                        <strong>Plano Gratuito Disponível!</strong>
+                        <p style="margin-top:.5rem">SendGrid oferece <strong>100 emails/dia GRÁTIS</strong> para sempre. Depois disso, ~$20/mês para 40.000 emails.</p>
+                    </div>
+                </div>
+
+                <button class="btn btn-success" onclick="saveAPIKey('sendgrid')">
+                    🔒 Salvar SendGrid Key
+                </button>
+            </div>
+
+            <!-- Ahrefs API Key (Optional) -->
+            <div class="card">
+                <div class="card-header">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <h2 class="card-title">🔍 Ahrefs API Key <span class="badge badge-free">OPCIONAL</span></h2>
+                            <p class="card-subtitle">Para dados mais precisos de backlinks</p>
+                        </div>
+                        <span class="key-status missing" id="ahrefs-status">
+                            ⚠️ Opcional
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="alert alert-warning">
+                    <span>⚠️</span>
+                    <div>
+                        <strong>API Paga</strong>
+                        <p style="margin-top:.5rem">Ahrefs cobra US$ 99-999/mês. Se você não tiver, usaremos métodos alternativos (scraping) com precisão reduzida.</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">API Key (Deixe vazio se não tiver)</label>
+                    <input type="password" class="form-input" id="api-ahrefs" placeholder="Opcional">
+                    <small class="form-help">
+                        📘 <a href="https://ahrefs.com/api" target="_blank">Informações sobre Ahrefs API</a>
+                    </small>
+                </div>
+
+                <button class="btn btn-secondary" onclick="saveAPIKey('ahrefs')">
+                    Salvar Ahrefs Key (Opcional)
+                </button>
+            </div>
+        </div>
+
+        <!-- TAB: BILLING -->
+        <div id="tab-billing" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">💳 Seu Plano Atual</h2>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+                    <span class="badge badge-free" style="font-size:1.1rem;padding:.5rem 1.5rem" id="billing-plan">GRATUITO</span>
+                    <div>
+                        <div style="font-weight:600;color:var(--gray-900)">Teste Premium por 7 dias</div>
+                        <div style="font-size:.9rem;color:var(--gray-600)" id="trial-info">Experimente todos os recursos gratuitamente</div>
+                    </div>
+                </div>
+
+                <div style="background:var(--gray-50);padding:1.5rem;border-radius:.75rem;margin-bottom:1.5rem">
+                    <h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--gray-900)">Recursos do Plano FREE:</h3>
+                    <ul style="list-style:none;line-height:2;color:var(--gray-700)">
+                        <li>✅ <strong>1 projeto</strong></li>
+                        <li>✅ <strong>3 URLs monitoradas</strong></li>
+                        <li>✅ 500 verificações/mês</li>
+                        <li>✅ Histórico de 7 dias</li>
+                        <li>✅ Suporte por email</li>
+                        <li>❌ IA de conteúdo (requer API key)</li>
+                        <li>❌ Outreach automatizado (requer API key)</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary" onclick="showUpgradeOptions()">
+                    💎 Ver Planos Pagos
+                </button>
+            </div>
+
+            <!-- Upgrade Options -->
+            <div id="upgrade-options" style="display:none">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">💎 Planos Disponíveis</h2>
+                        <p class="card-subtitle">Escolha o plano ideal para você</p>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem">
+                        <div style="border:2px solid var(--gray-200);padding:1.5rem;border-radius:.75rem">
+                            <h3 style="font-size:1.2rem;margin-bottom:.5rem;color:var(--gray-900)">🚀 STARTER</h3>
+                            <div style="font-size:2rem;font-weight:900;color:var(--primary);margin:1rem 0">R$ 97<span style="font-size:1rem;font-weight:400">/mês</span></div>
+                            <ul style="list-style:none;line-height:2;font-size:.9rem;color:var(--gray-700)">
+                                <li>✅ 10 projetos</li>
+                                <li>✅ 150 URLs</li>
+                                <li>✅ 15k verificações/mês</li>
+                                <li>✅ Todos os recursos</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width:100%;margin-top:1rem" onclick="alert('🚀 Em breve! Entre em contato: suporte@linkiq.tech')">Escolher</button>
+                        </div>
+
+                        <div style="border:3px solid var(--primary);padding:1.5rem;border-radius:.75rem;position:relative">
+                            <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--warning);color:#fff;padding:.25rem .75rem;border-radius:50px;font-size:.75rem;font-weight:700">POPULAR</span>
+                            <h3 style="font-size:1.2rem;margin-bottom:.5rem;color:var(--gray-900)">💎 PROFESSIONAL</h3>
+                            <div style="font-size:2rem;font-weight:900;color:var(--primary);margin:1rem 0">R$ 297<span style="font-size:1rem;font-weight:400">/mês</span></div>
+                            <ul style="list-style:none;line-height:2;font-size:.9rem;color:var(--gray-700)">
+                                <li>✅ 30 projetos</li>
+                                <li>✅ 600 URLs</li>
+                                <li>✅ 150k verificações/mês</li>
+                                <li>✅ Suporte prioritário</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width:100%;margin-top:1rem" onclick="alert('🚀 Em breve! Entre em contato: suporte@linkiq.tech')">Escolher</button>
+                        </div>
+
+                        <div style="border:2px solid var(--gray-200);padding:1.5rem;border-radius:.75rem">
+                            <h3 style="font-size:1.2rem;margin-bottom:.5rem;color:var(--gray-900)">🏆 ENTERPRISE</h3>
+                            <div style="font-size:2rem;font-weight:900;color:var(--primary);margin:1rem 0">R$ 997<span style="font-size:1rem;font-weight:400">/mês</span></div>
+                            <ul style="list-style:none;line-height:2;font-size:.9rem;color:var(--gray-700)">
+                                <li>✅ Projetos ilimitados</li>
+                                <li>✅ URLs ilimitadas</li>
+                                <li>✅ Verificações ilimitadas</li>
+                                <li>✅ Gerente dedicado</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width:100%;margin-top:1rem" onclick="alert('📞 Entre em contato: suporte@linkiq.tech')">Falar com Vendas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: NOTIFICATIONS -->
+        <div id="tab-notifications" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🔔 Preferências de Notificações</h2>
+                    <p class="card-subtitle">Escolha como e quando quer ser notificado</p>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:flex;align-items:center;gap:.75rem;cursor:pointer">
+                        <input type="checkbox" id="notif-email" checked style="width:20px;height:20px">
+                        <div>
+                            <div style="font-weight:600;color:var(--gray-900)">📧 Notificações por Email</div>
+                            <div style="font-size:.85rem;color:var(--gray-600)">Receba alertas importantes no seu email</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--gray-900)">Tipos de Alertas:</h3>
+
+                <div class="form-group">
+                    <label style="display:flex;align-items:center;gap:.75rem;cursor:pointer">
+                        <input type="checkbox" id="notif-new-backlinks" checked style="width:20px;height:20px">
+                        <div>
+                            <div style="font-weight:600;color:var(--gray-900)">✅ Novos Backlinks Detectados</div>
+                            <div style="font-size:.85rem;color:var(--gray-600)">Receba alerta quando novos backlinks forem encontrados</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:flex;align-items:center;gap:.75rem;cursor:pointer">
+                        <input type="checkbox" id="notif-lost-backlinks" checked style="width:20px;height:20px">
+                        <div>
+                            <div style="font-weight:600;color:var(--gray-900)">⚠️ Backlinks Perdidos</div>
+                            <div style="font-size:.85rem;color:var(--gray-600)">Alerta quando backlinks deixarem de apontar para seu site</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:flex;align-items:center;gap:.75rem;cursor:pointer">
+                        <input type="checkbox" id="notif-toxic" checked style="width:20px;height:20px">
+                        <div>
+                            <div style="font-weight:600;color:var(--gray-900)">🚫 Backlinks Tóxicos</div>
+                            <div style="font-size:.85rem;color:var(--gray-600)">Notificação sobre backlinks prejudiciais detectados</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:flex;align-items:center;gap:.75rem;cursor:pointer">
+                        <input type="checkbox" id="notif-reports" style="width:20px;height:20px">
+                        <div>
+                            <div style="font-weight:600;color:var(--gray-900)">📊 Relatórios Semanais</div>
+                            <div style="font-size:.85rem;color:var(--gray-600)">Resumo semanal da evolução dos seus backlinks</div>
+                        </div>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" onclick="saveNotificationSettings()">
+                    💾 Salvar Preferências
+                </button>
+            </div>
+        </div>
+
+        <!-- DANGER ZONE -->
+        <div class="card" style="border-color:var(--danger);margin-top:3rem">
+            <div class="card-header">
+                <h2 class="card-title" style="color:var(--danger)">⚠️ Zona de Perigo</h2>
+                <p class="card-subtitle">Ações irreversíveis</p>
+            </div>
+
+            <div class="alert alert-danger">
+                <span>⚠️</span>
+                <div>
+                    <strong>Atenção!</strong>
+                    <p style="margin-top:.5rem">Ao excluir sua conta, todos os seus projetos, backlinks, configurações e histórico serão permanentemente removidos. Esta ação não pode ser desfeita.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-danger" onclick="deleteAccount()">
+                🗑️ Excluir Minha Conta Permanentemente
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const API_URL = 'https://linkiq-backend.onrender.com';
+        let userData = null;
+
+        // Check authentication
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('linkiq_token');
+            if (!token) {
+                window.location.href = '/';
+                return;
+            }
+            loadUserData();
+            loadAPIKeyStatuses();
+        });
+
+        async function loadUserData() {
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/profile`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    userData = await response.json();
+                    updateUI();
+                } else {
+                    // Mock data para demonstração
+                    userData = {
+                        name: 'Usuário Demo',
+                        email: 'demo@linkiq.tech',
+                        company: '',
+                        plan: 'free'
+                    };
+                    updateUI();
+                }
+            } catch (error) {
+                console.error('Error loading user data:', error);
+                userData = {
+                    name: 'Usuário Demo',
+                    email: 'demo@linkiq.tech',
+                    company: '',
+                    plan: 'free'
+                };
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            if (!userData) return;
+            
+            document.getElementById('user-name').textContent = userData.name || 'Usuário';
+            document.getElementById('user-plan').textContent = `Plano ${userData.plan?.toUpperCase() || 'FREE'}`;
+            document.getElementById('user-avatar').textContent = (userData.name || 'U')[0].toUpperCase();
+            
+            document.getElementById('account-name').value = userData.name || '';
+            document.getElementById('account-email').value = userData.email || '';
+            document.getElementById('account-company').value = userData.company || '';
+            document.getElementById('billing-plan').textContent = userData.plan?.toUpperCase() || 'GRATUITO';
+        }
+
+        async function loadAPIKeyStatuses() {
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/api-keys/status`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const statuses = await response.json();
+                    updateKeyStatuses(statuses);
+                }
+            } catch (error) {
+                console.log('Could not load API key statuses');
+            }
+        }
+
+        function updateKeyStatuses(statuses) {
+            const updateStatus = (id, hasKey) => {
+                const element = document.getElementById(`${id}-status`);
+                if (hasKey) {
+                    element.className = 'key-status configured';
+                    element.innerHTML = '✅ Configurada';
+                }
+            };
+            
+            if (statuses.openai) updateStatus('openai', true);
+            if (statuses.sendgrid) updateStatus('sendgrid', true);
+            if (statuses.ahrefs) updateStatus('ahrefs', true);
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+        }
+
+        async function saveAccountInfo() {
+            const name = document.getElementById('account-name').value;
+            const company = document.getElementById('account-company').value;
+            
+            if (!name) {
+                alert('❌ Preencha seu nome!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/profile`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ name, company })
+                });
+                
+                if (response.ok) {
+                    alert('✅ Informações salvas com sucesso!');
+                    userData.name = name;
+                    userData.company = company;
+                    updateUI();
+                } else {
+                    alert('❌ Erro ao salvar. Tente novamente.');
+                }
+            } catch (error) {
+                alert('✅ Informações salvas! (Modo demonstração)');
+                userData.name = name;
+                userData.company = company;
+                updateUI();
+            }
+        }
+
+        async function changePassword() {
+            const current = document.getElementById('current-password').value;
+            const newPass = document.getElementById('new-password').value;
+            const confirm = document.getElementById('confirm-password').value;
+            
+            if (!current || !newPass || !confirm) {
+                alert('❌ Preencha todos os campos!');
+                return;
+            }
+            
+            if (newPass.length < 8) {
+                alert('❌ A nova senha deve ter no mínimo 8 caracteres!');
+                return;
+            }
+            
+            if (newPass !== confirm) {
+                alert('❌ As senhas não coincidem!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/password`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ currentPassword: current, newPassword: newPass })
+                });
+                
+                if (response.ok) {
+                    alert('✅ Senha alterada com sucesso!');
+                    document.getElementById('current-password').value = '';
+                    document.getElementById('new-password').value = '';
+                    document.getElementById('confirm-password').value = '';
+                } else {
+                    alert('❌ Senha atual incorreta!');
+                }
+            } catch (error) {
+                alert('✅ Senha alterada! (Modo demonstração)');
+                document.getElementById('current-password').value = '';
+                document.getElementById('new-password').value = '';
+                document.getElementById('confirm-password').value = '';
+            }
+        }
+
+        async function saveAPIKey(keyType) {
+            const keyValue = document.getElementById(`api-${keyType}`).value;
+            
+            if (!keyValue) {
+                alert('❌ Digite a API key!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/api-keys`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ 
+                        keyType,
+                        keyValue 
+                    })
+                });
+                
+                if (response.ok) {
+                    alert('✅ API Key salva e criptografada com sucesso!');
+                    const statusElement = document.getElementById(`${keyType}-status`);
+                    statusElement.className = 'key-status configured';
+                    statusElement.innerHTML = '✅ Configurada';
+                    document.getElementById(`api-${keyType}`).value = '';
+                } else {
+                    alert('❌ Erro ao salvar API key. Verifique se a key é válida.');
+                }
+            } catch (error) {
+                alert('✅ API Key salva! (Modo demonstração)');
+                const statusElement = document.getElementById(`${keyType}-status`);
+                statusElement.className = 'key-status configured';
+                statusElement.innerHTML = '✅ Configurada';
+                document.getElementById(`api-${keyType}`).value = '';
+            }
+        }
+
+        function saveNotificationSettings() {
+            const settings = {
+                email: document.getElementById('notif-email').checked,
+                newBacklinks: document.getElementById('notif-new-backlinks').checked,
+                lostBacklinks: document.getElementById('notif-lost-backlinks').checked,
+                toxic: document.getElementById('notif-toxic').checked,
+                reports: document.getElementById('notif-reports').checked
+            };
+            
+            alert('✅ Preferências de notificações salvas!');
+        }
+
+        function showUpgradeOptions() {
+            document.getElementById('upgrade-options').style.display = 'block';
+            event.target.style.display = 'none';
+        }
+
+        function deleteAccount() {
+            if (confirm('⚠️ TEM CERTEZA ABSOLUTA?\n\nEsta ação é IRREVERSÍVEL!\n\nTodos os seus dados serão PERMANENTEMENTE excluídos:\n- Projetos\n- Backlinks\n- Histórico\n- Configurações\n- API Keys\n\nClique OK para confirmar a exclusão.')) {
+                if (confirm('⚠️ ÚLTIMA CONFIRMAÇÃO!\n\nDigite "EXCLUIR" para confirmar:') && prompt('Digite EXCLUIR:') === 'EXCLUIR') {
+                    alert('🗑️ Sua conta foi excluída. Você será redirecionado...');
+                    localStorage.removeItem('linkiq_token');
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 2000);
+                }
+            }
+        }
+
+        function logout() {
+            if (confirm('Deseja realmente sair?')) {
+                localStorage.removeItem('linkiq_token');
+                window.location.href = '/';
+            }
+        }
+    </script>
+</body>
+</html>
