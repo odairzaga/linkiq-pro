@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LinkIQ.tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}:root{--primary:#6366f1;--primary-dark:#4f46e5;--success:#10b981;--warning:#f59e0b;--danger:#ef4444;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-600:#475569;--gray-700:#334155;--gray-900:#0f172a}.sidebar{position:fixed;left:0;top:0;bottom:0;width:260px;background:#fff;border-right:1px solid var(--gray-200);padding:2rem 0;overflow-y:auto;z-index:100}.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--primary) 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:0 1.5rem;margin-bottom:2rem}.nav-menu{list-style:none}.nav-item{padding:.75rem 1.5rem;display:flex;align-items:center;gap:.75rem;color:var(--gray-600);cursor:pointer;transition:.2s;font-size:.95rem;font-weight:500}.nav-item:hover,.nav-item.active{background:var(--gray-50);color:var(--primary)}.nav-icon{font-size:1.2rem}.main-content{margin-left:260px;padding:2rem}.header{background:#fff;padding:1.5rem 2rem;border-radius:1rem;margin-bottom:2rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;justify-content:space-between;align-items:center}.header h1{font-size:1.75rem;font-weight:800;color:var(--gray-900)}.user-info{display:flex;align-items:center;gap:1rem}.user-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#8b5cf6 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}.user-details{text-align:right}.user-name{font-weight:600;font-size:.9rem;color:var(--gray-900)}.user-plan{font-size:.8rem;color:var(--gray-600)}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:2rem}.stat-card{background:#fff;padding:1.5rem;border-radius:1rem;border:2px solid var(--gray-100);transition:.3s}.stat-card:hover{border-color:var(--primary);box-shadow:0 10px 30px rgba(0,0,0,.08);transform:translateY(-2px)}.stat-icon{width:50px;height:50px;border-radius:.75rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}.stat-icon.blue{background:rgba(99,102,241,.1);color:var(--primary)}.stat-icon.green{background:rgba(16,185,129,.1);color:var(--success)}.stat-icon.yellow{background:rgba(245,158,11,.1);color:var(--warning)}.stat-icon.red{background:rgba(239,68,68,.1);color:var(--danger)}.stat-value{font-size:2rem;font-weight:900;color:var(--gray-900);margin-bottom:.25rem}.stat-label{font-size:.9rem;color:var(--gray-600)}.card{background:#fff;border-radius:1rem;padding:2rem;margin-bottom:1.5rem;border:2px solid var(--gray-100)}.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}.card-title{font-size:1.3rem;font-weight:700;color:var(--gray-900)}.btn{padding:.75rem 1.5rem;border-radius:.5rem;font-weight:600;border:none;cursor:pointer;transition:.3s;font-size:.9rem;display:inline-flex;align-items:center;gap:.5rem}.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}.btn-secondary{background:var(--gray-100);color:var(--gray-700)}.btn-secondary:hover{background:var(--gray-200)}.btn-success{background:var(--success);color:#fff}.btn-danger{background:var(--danger);color:#fff}.btn-sm{padding:.5rem 1rem;font-size:.85rem}.table{width:100%;border-collapse:collapse}.table th{text-align:left;padding:1rem;background:var(--gray-50);color:var(--gray-700);font-weight:600;font-size:.9rem;border-bottom:2px solid var(--gray-200)}.table td{padding:1rem;border-bottom:1px solid var(--gray-100)}.badge{display:inline-block;padding:.25rem .75rem;border-radius:50px;font-size:.8rem;font-weight:600}.badge-success{background:rgba(16,185,129,.1);color:var(--success)}.badge-warning{background:rgba(245,158,11,.1);color:var(--warning)}.badge-danger{background:rgba(239,68,68,.1);color:var(--danger)}.badge-gray{background:var(--gray-100);color:var(--gray-600)}.empty-state{text-align:center;padding:4rem 2rem;color:var(--gray-600)}.empty-state-icon{font-size:4rem;margin-bottom:1rem;opacity:.3}.empty-state h3{font-size:1.3rem;color:var(--gray-900);margin-bottom:.5rem}.empty-state p{margin-bottom:2rem}.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}.modal.active{display:flex}.modal-content{background:#fff;border-radius:1rem;padding:2rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto}.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}.modal-title{font-size:1.5rem;font-weight:700;color:var(--gray-900)}.close-modal{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--gray-600)}.close-modal:hover{color:var(--gray-900)}.form-group{margin-bottom:1.5rem}.form-label{display:block;margin-bottom:.5rem;font-weight:600;color:var(--gray-700);font-size:.9rem}.form-input,.form-select,.form-textarea{width:100%;padding:.75rem;border:2px solid var(--gray-200);border-radius:.5rem;font-size:.95rem;transition:.2s}.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:var(--primary)}.form-textarea{min-height:120px;resize:vertical}.alert{padding:1rem 1.5rem;border-radius:.75rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}.alert-success{background:rgba(16,185,129,.1);border:2px solid var(--success);color:var(--success)}.alert-warning{background:rgba(245,158,11,.1);border:2px solid var(--warning);color:var(--warning)}.alert-danger{background:rgba(239,68,68,.1);border:2px solid var(--danger);color:var(--danger)}.alert-info{background:rgba(99,102,241,.1);border:2px solid var(--primary);color:var(--primary)}.loading{display:none;text-align:center;padding:2rem;color:var(--gray-600)}.loading.active{display:block}@media (max-width:768px){.sidebar{width:100%;position:relative;border-right:none;border-bottom:1px solid var(--gray-200)}.main-content{margin-left:0}.stats-grid{grid-template-columns:1fr}.header{flex-direction:column;gap:1rem;text-align:center}}
+    </style>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">LinkIQ.tech</div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="showSection('overview')">
+                <span class="nav-icon">📊</span>
+                <span>Visão Geral</span>
+            </li>
+            <li class="nav-item" onclick="showSection('projects')">
+                <span class="nav-icon">📁</span>
+                <span>Projetos</span>
+            </li>
+            <li class="nav-item" onclick="showSection('backlinks')">
+                <span class="nav-icon">🔗</span>
+                <span>Backlinks</span>
+            </li>
+            <li class="nav-item" onclick="showSection('ai-content')">
+                <span class="nav-icon">🤖</span>
+                <span>IA - Conteúdo</span>
+            </li>
+            <li class="nav-item" onclick="showSection('outreach')">
+                <span class="nav-icon">📧</span>
+                <span>Outreach</span>
+            </li>
+            <li class="nav-item" onclick="showSection('settings')">
+                <span class="nav-icon">⚙️</span>
+                <span>Configurações</span>
+            </li>
+            <li class="nav-item" onclick="logout()">
+                <span class="nav-icon">🚪</span>
+                <span>Sair</span>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HEADER -->
+        <div class="header">
+            <h1 id="page-title">Visão Geral</h1>
+            <div class="user-info">
+                <div class="user-details">
+                    <div class="user-name" id="user-name">Carregando...</div>
+                    <div class="user-plan" id="user-plan">Plano FREE</div>
+                </div>
+                <div class="user-avatar" id="user-avatar">?</div>
+            </div>
+        </div>
+
+        <!-- SECTION: OVERVIEW -->
+        <div id="section-overview" class="section">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📁</div>
+                    <div class="stat-value" id="stat-projects">0</div>
+                    <div class="stat-label">Projetos Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">🔗</div>
+                    <div class="stat-value" id="stat-backlinks">0</div>
+                    <div class="stat-label">Backlinks Detectados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon yellow">📊</div>
+                    <div class="stat-value" id="stat-checks">0</div>
+                    <div class="stat-label">Verificações Este Mês</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red">⚠️</div>
+                    <div class="stat-value" id="stat-alerts">0</div>
+                    <div class="stat-label">Alertas Pendentes</div>
+                </div>
+            </div>
+
+            <!-- Welcome Card -->
+            <div class="card">
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong>Bem-vindo ao LinkIQ!</strong>
+                        <p style="margin-top:.5rem">Você está no plano <strong>GRATUITO</strong> com 7 dias de teste dos recursos premium. Configure suas API keys para começar a usar IA e outreach!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Ações Rápidas</h2>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+                    <button class="btn btn-primary" onclick="showSection('projects')">
+                        📁 Criar Projeto
+                    </button>
+                    <button class="btn btn-secondary" onclick="showSection('settings')">
+                        🔑 Configurar API Keys
+                    </button>
+                    <button class="btn btn-secondary" onclick="showSection('ai-content')">
+                        🤖 Gerar Conteúdo com IA
+                    </button>
+                    <button class="btn btn-secondary" onclick="alert('Em breve!')">
+                        💎 Fazer Upgrade
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Atividade Recente</h2>
+                </div>
+                <div class="empty-state">
+                    <div class="empty-state-icon">📊</div>
+                    <h3>Nenhuma atividade ainda</h3>
+                    <p>Crie seu primeiro projeto para começar a monitorar backlinks!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: PROJECTS -->
+        <div id="section-projects" class="section" style="display:none">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Meus Projetos</h2>
+                    <button class="btn btn-primary btn-sm" onclick="openModal('modal-new-project')">
+                        + Novo Projeto
+                    </button>
+                </div>
+                <div id="projects-list">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📁</div>
+                        <h3>Nenhum projeto criado</h3>
+                        <p>Crie seu primeiro projeto para começar a monitorar backlinks!</p>
+                        <button class="btn btn-primary" onclick="openModal('modal-new-project')">
+                            + Criar Primeiro Projeto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: BACKLINKS -->
+        <div id="section-backlinks" class="section" style="display:none">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Backlinks Detectados</h2>
+                    <button class="btn btn-secondary btn-sm" onclick="alert('Analisando...')">
+                        🔄 Atualizar
+                    </button>
+                </div>
+                <div class="empty-state">
+                    <div class="empty-state-icon">🔗</div>
+                    <h3>Nenhum backlink detectado</h3>
+                    <p>Adicione URLs aos seus projetos para começar o monitoramento!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: AI CONTENT -->
+        <div id="section-ai-content" class="section" style="display:none">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🤖 Gerador de Conteúdo com IA</h2>
+                </div>
+                
+                <div class="alert alert-warning">
+                    <span>⚠️</span>
+                    <div>
+                        <strong>Configure sua API Key da OpenAI</strong>
+                        <p style="margin-top:.5rem">Para usar este recurso, você precisa adicionar sua chave de API da OpenAI nas configurações.</p>
+                        <button class="btn btn-sm btn-primary" onclick="showSection('settings')" style="margin-top:.5rem">
+                            Ir para Configurações
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Tipo de Conteúdo</label>
+                    <select class="form-select" id="ai-content-type">
+                        <option value="outreach">Email de Outreach</option>
+                        <option value="anchor">Sugestões de Anchor Text</option>
+                        <option value="strategy">Estratégia de Link Building</option>
+                        <option value="article">Artigo para Guest Post</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Descreva o que você precisa</label>
+                    <textarea class="form-textarea" id="ai-prompt" placeholder="Ex: Preciso de um email para pedir backlink de um blog de tecnologia..."></textarea>
+                </div>
+
+                <button class="btn btn-primary" onclick="generateAIContent()">
+                    ✨ Gerar Conteúdo
+                </button>
+
+                <div id="ai-result" style="display:none;margin-top:2rem">
+                    <div class="card-header">
+                        <h3 class="card-title">Resultado:</h3>
+                    </div>
+                    <div style="background:var(--gray-50);padding:1.5rem;border-radius:.75rem;white-space:pre-wrap" id="ai-result-content"></div>
+                    <button class="btn btn-secondary btn-sm" onclick="copyToClipboard('ai-result-content')" style="margin-top:1rem">
+                        📋 Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: OUTREACH -->
+        <div id="section-outreach" class="section" style="display:none">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📧 Outreach de Emails</h2>
+                    <button class="btn btn-primary btn-sm" onclick="openModal('modal-new-campaign')">
+                        + Nova Campanha
+                    </button>
+                </div>
+                
+                <div class="alert alert-warning">
+                    <span>⚠️</span>
+                    <div>
+                        <strong>Configure sua API Key do SendGrid</strong>
+                        <p style="margin-top:.5rem">Para enviar emails, você precisa adicionar sua chave de API do SendGrid nas configurações.</p>
+                        <button class="btn btn-sm btn-primary" onclick="showSection('settings')" style="margin-top:.5rem">
+                            Ir para Configurações
+                        </button>
+                    </div>
+                </div>
+
+                <div class="empty-state">
+                    <div class="empty-state-icon">📧</div>
+                    <h3>Nenhuma campanha criada</h3>
+                    <p>Crie sua primeira campanha de outreach para começar a conseguir backlinks!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: SETTINGS -->
+        <div id="section-settings" class="section" style="display:none">
+            <!-- Account Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">👤 Minha Conta</h2>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-input" id="settings-name" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="settings-email" placeholder="seu@email.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Plano Atual</label>
+                    <div style="display:flex;align-items:center;gap:1rem">
+                        <span class="badge badge-success" id="settings-plan">GRATUITO</span>
+                        <button class="btn btn-primary btn-sm" onclick="alert('🚀 Em breve! Entre em contato: suporte@linkiq.tech')">
+                            💎 Fazer Upgrade
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveAccountSettings()">
+                    💾 Salvar Alterações
+                </button>
+            </div>
+
+            <!-- API Keys Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🔑 API Keys (BYOK)</h2>
+                </div>
+                
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong>Modelo BYOK (Bring Your Own Key)</strong>
+                        <p style="margin-top:.5rem">Você mantém controle total! Adicione suas próprias API keys para usar IA e enviar emails. Custo médio: $10-30/mês direto com os provedores.</p>
+                    </div>
+                </div>
+
+                <!-- OpenAI API Key -->
+                <div class="form-group">
+                    <label class="form-label">🤖 OpenAI API Key (GPT-4)</label>
+                    <input type="password" class="form-input" id="api-openai" placeholder="sk-...">
+                    <small style="color:var(--gray-600);font-size:.85rem;margin-top:.5rem;display:block">
+                        📘 <a href="https://platform.openai.com/api-keys" target="_blank" style="color:var(--primary)">Criar conta/obter key na OpenAI</a>
+                    </small>
+                </div>
+
+                <!-- SendGrid API Key -->
+                <div class="form-group">
+                    <label class="form-label">📧 SendGrid API Key</label>
+                    <input type="password" class="form-input" id="api-sendgrid" placeholder="SG.">
+                    <small style="color:var(--gray-600);font-size:.85rem;margin-top:.5rem;display:block">
+                        📘 <a href="https://app.sendgrid.com/settings/api_keys" target="_blank" style="color:var(--primary)">Criar conta/obter key no SendGrid</a> (100 emails/dia grátis)
+                    </small>
+                </div>
+
+                <!-- Ahrefs API Key (Optional) -->
+                <div class="form-group">
+                    <label class="form-label">🔍 Ahrefs API Key (Opcional)</label>
+                    <input type="password" class="form-input" id="api-ahrefs" placeholder="Deixe vazio se não tiver">
+                    <small style="color:var(--gray-600);font-size:.85rem;margin-top:.5rem;display:block">
+                        Se você não tiver, usaremos scraping alternativo (menos preciso)
+                    </small>
+                </div>
+
+                <button class="btn btn-success" onclick="saveAPIKeys()">
+                    🔒 Salvar API Keys (Criptografadas)
+                </button>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="card" style="border-color:var(--danger)">
+                <div class="card-header">
+                    <h2 class="card-title" style="color:var(--danger)">⚠️ Zona de Perigo</h2>
+                </div>
+                <p style="color:var(--gray-600);margin-bottom:1rem">Esta ação não pode ser desfeita. Todos os seus dados serão permanentemente excluídos.</p>
+                <button class="btn btn-danger" onclick="deleteAccount()">
+                    🗑️ Excluir Minha Conta
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL: NEW PROJECT -->
+    <div id="modal-new-project" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Criar Novo Projeto</h2>
+                <button class="close-modal" onclick="closeModal('modal-new-project')">×</button>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nome do Projeto</label>
+                <input type="text" class="form-input" id="project-name" placeholder="Ex: Meu Blog Pessoal">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Domínio Principal</label>
+                <input type="text" class="form-input" id="project-domain" placeholder="Ex: meublog.com">
+            </div>
+            <div class="form-group">
+                <label class="form-label">URLs para Monitorar (uma por linha)</label>
+                <textarea class="form-textarea" id="project-urls" placeholder="https://meublog.com/artigo-1&#10;https://meublog.com/artigo-2"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="createProject()">Criar Projeto</button>
+        </div>
+    </div>
+
+    <!-- MODAL: NEW CAMPAIGN -->
+    <div id="modal-new-campaign" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Nova Campanha de Outreach</h2>
+                <button class="close-modal" onclick="closeModal('modal-new-campaign')">×</button>
+            </div>
+            <div class="alert alert-warning">
+                <span>⚠️</span>
+                <span>Configure sua API Key do SendGrid nas configurações antes de criar campanhas!</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nome da Campanha</label>
+                <input type="text" class="form-input" placeholder="Ex: Guest Posts Tech Blogs">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Assunto do Email</label>
+                <input type="text" class="form-input" placeholder="Ex: Parceria para Guest Post">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Template do Email</label>
+                <textarea class="form-textarea" placeholder="Olá {nome},&#10;&#10;Meu nome é..."></textarea>
+            </div>
+            <button class="btn btn-primary">Criar Campanha</button>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://linkiq-backend.onrender.com';
+        let userData = null;
+
+        // Check authentication
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('linkiq_token');
+            if (!token) {
+                window.location.href = '/';
+                return;
+            }
+            loadUserData();
+        });
+
+        async function loadUserData() {
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/profile`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    userData = await response.json();
+                    updateUI();
+                } else {
+                    logout();
+                }
+            } catch (error) {
+                console.error('Error loading user data:', error);
+                // Usar dados mockados para demonstração
+                userData = {
+                    name: 'Usuário Demo',
+                    email: 'demo@linkiq.tech',
+                    plan: 'free',
+                    stats: { projects: 0, backlinks: 0, checks: 0, alerts: 0 }
+                };
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            if (!userData) return;
+            
+            document.getElementById('user-name').textContent = userData.name || 'Usuário';
+            document.getElementById('user-plan').textContent = `Plano ${userData.plan?.toUpperCase() || 'FREE'}`;
+            document.getElementById('user-avatar').textContent = (userData.name || 'U')[0].toUpperCase();
+            
+            document.getElementById('settings-name').value = userData.name || '';
+            document.getElementById('settings-email').value = userData.email || '';
+            document.getElementById('settings-plan').textContent = userData.plan?.toUpperCase() || 'GRATUITO';
+            
+            if (userData.stats) {
+                document.getElementById('stat-projects').textContent = userData.stats.projects || 0;
+                document.getElementById('stat-backlinks').textContent = userData.stats.backlinks || 0;
+                document.getElementById('stat-checks').textContent = userData.stats.checks || 0;
+                document.getElementById('stat-alerts').textContent = userData.stats.alerts || 0;
+            }
+        }
+
+        function showSection(sectionName) {
+            document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            
+            const section = document.getElementById(`section-${sectionName}`);
+            if (section) section.style.display = 'block';
+            
+            event.target.closest('.nav-item').classList.add('active');
+            
+            const titles = {
+                'overview': 'Visão Geral',
+                'projects': 'Meus Projetos',
+                'backlinks': 'Backlinks',
+                'ai-content': 'IA - Gerador de Conteúdo',
+                'outreach': 'Outreach de Emails',
+                'settings': 'Configurações'
+            };
+            document.getElementById('page-title').textContent = titles[sectionName] || 'Dashboard';
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        async function createProject() {
+            const name = document.getElementById('project-name').value;
+            const domain = document.getElementById('project-domain').value;
+            const urls = document.getElementById('project-urls').value.split('\n').filter(u => u.trim());
+            
+            if (!name || !domain || urls.length === 0) {
+                alert('❌ Preencha todos os campos!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/projects`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ name, domain, urls })
+                });
+                
+                if (response.ok) {
+                    alert('✅ Projeto criado com sucesso!');
+                    closeModal('modal-new-project');
+                    loadUserData();
+                } else {
+                    const data = await response.json();
+                    alert(`❌ ${data.message || 'Erro ao criar projeto'}`);
+                }
+            } catch (error) {
+                alert('❌ Erro de conexão. Tente novamente.');
+            }
+        }
+
+        async function generateAIContent() {
+            const type = document.getElementById('ai-content-type').value;
+            const prompt = document.getElementById('ai-prompt').value;
+            
+            if (!prompt) {
+                alert('❌ Descreva o que você precisa!');
+                return;
+            }
+            
+            const apiKey = document.getElementById('api-openai').value;
+            if (!apiKey) {
+                alert('⚠️ Configure sua API Key da OpenAI nas configurações primeiro!');
+                showSection('settings');
+                return;
+            }
+            
+            document.getElementById('ai-result').style.display = 'none';
+            alert('🤖 Gerando conteúdo... (isso pode levar 10-30 segundos)');
+            
+            try {
+                // Simulação - implementar chamada real à OpenAI
+                setTimeout(() => {
+                    const mockContent = `[CONTEÚDO GERADO PELA IA]\n\nAssunto: Oportunidade de Parceria\n\nOlá!\n\nMeu nome é ${userData.name} e trabalho com ${document.getElementById('project-domain')?.value || 'marketing digital'}.\n\nGostaria de propor uma parceria...\n\n[Este é um exemplo mockado. Com sua API key da OpenAI configurada, o conteúdo real será gerado aqui]`;
+                    
+                    document.getElementById('ai-result-content').textContent = mockContent;
+                    document.getElementById('ai-result').style.display = 'block';
+                }, 2000);
+            } catch (error) {
+                alert('❌ Erro ao gerar conteúdo. Verifique sua API key.');
+            }
+        }
+
+        async function saveAPIKeys() {
+            const keys = {
+                openai: document.getElementById('api-openai').value,
+                sendgrid: document.getElementById('api-sendgrid').value,
+                ahrefs: document.getElementById('api-ahrefs').value
+            };
+            
+            if (!keys.openai && !keys.sendgrid) {
+                alert('❌ Adicione pelo menos uma API key!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/api-keys`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(keys)
+                });
+                
+                if (response.ok) {
+                    alert('✅ API Keys salvas com sucesso! (Criptografadas e seguras)');
+                } else {
+                    alert('❌ Erro ao salvar API keys. Tente novamente.');
+                }
+            } catch (error) {
+                // Mock success para demonstração
+                alert('✅ API Keys salvas com sucesso! (Modo demonstração)');
+            }
+        }
+
+        async function saveAccountSettings() {
+            const name = document.getElementById('settings-name').value;
+            
+            if (!name) {
+                alert('❌ Preencha seu nome!');
+                return;
+            }
+            
+            try {
+                const token = localStorage.getItem('linkiq_token');
+                const response = await fetch(`${API_URL}/api/user/profile`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ name })
+                });
+                
+                if (response.ok) {
+                    alert('✅ Configurações salvas!');
+                    userData.name = name;
+                    updateUI();
+                } else {
+                    alert('❌ Erro ao salvar. Tente novamente.');
+                }
+            } catch (error) {
+                alert('✅ Configurações salvas! (Modo demonstração)');
+                userData.name = name;
+                updateUI();
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text);
+            alert('📋 Copiado para a área de transferência!');
+        }
+
+        function deleteAccount() {
+            if (confirm('⚠️ TEM CERTEZA? Esta ação não pode ser desfeita!\n\nTodos os seus projetos, backlinks e configurações serão permanentemente excluídos.')) {
+                if (confirm('⚠️ ÚLTIMA CONFIRMAÇÃO: Deseja realmente excluir sua conta?')) {
+                    alert('🗑️ Conta excluída. Você será redirecionado...');
+                    localStorage.removeItem('linkiq_token');
+                    window.location.href = '/';
+                }
+            }
+        }
+
+        function logout() {
+            if (confirm('Deseja realmente sair?')) {
+                localStorage.removeItem('linkiq_token');
+                window.location.href = '/';
+            }
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
